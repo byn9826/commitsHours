@@ -24,7 +24,7 @@ class Commit extends Component {
         let punch = [];
         for (let j = 0; j < repos.length; j++) {
             xmlhttp = new XMLHttpRequest();  
-            xmlhttp.open("GET", "https://api.github.com/repos/" + repos[j] + "/stats/punch_card", false);  
+            xmlhttp.open("GET", "https://api.github.com/repos/" + repos[j] + "/stats/punch_card", false);
             xmlhttp.send();
             punch[j] = JSON.parse(xmlhttp.responseText);
         }
